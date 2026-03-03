@@ -31,8 +31,8 @@ a:hover {
 .hero {
   position: relative;
   flex: 1 1 50%;
-  background: url("https://source.unsplash.com/collection/620696/1600x900")
-    center/cover no-repeat;
+  /* use local image from img folder */
+  background: url("./img/halie.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
