@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Odin Signup</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="hero">
+      <div class="logo">
+        <!-- placeholder svg logo -->
+        <svg viewBox="0 0 64 64" fill="currentColor">
+          <path
+            d="M32 2L12 22v18l10 8v8h20v-8l10-8V22L32 2zM22 44h20v6H22v-6z"
+          />
+        </svg>
+        ODIN
+      </div>
+    </aside>
+
+    <main class="form-panel">
+      <h1>Let’s do this!</h1>
+      <p class="intro">
+        This is not a real online service! You know you need something like this
+        in your life to help you realize your deepest dreams.
+        <br />
+        <strong>Sign up now</strong> to get started.
+        <br />
+        <em>You know</em> you want to.
+      </p>
+
+      <form novalidate>
+        <div class="input-row">
+          <div class="field">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" name="firstName" />
+          </div>
+          <div class="field">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" name="lastName" />
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="field">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="field">
+            <label for="phone">PHONE NUMBER</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="field">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div class="field">
+            <label for="confirm">CONFIRM PASSWORD</label>
+            <input type="password" id="confirm" name="confirmPassword" />
+          </div>
+        </div>
+
+        <div class="submit-group">
+          <button type="submit">Create Account</button>
+        </div>
+
+        <p class="login-link">
+          Already have an account? <a href="#">Log in</a>
+        </p>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

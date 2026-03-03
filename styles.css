@@ -1,0 +1,136 @@
+/* Reset and basic typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  color: #333;
+}
+
+a {
+  color: #346e35;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* container splits screen in two */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* left panel */
+.hero {
+  position: relative;
+  flex: 1 1 50%;
+  background: url("https://source.unsplash.com/collection/620696/1600x900")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero .logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+}
+.hero .logo svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+/* right panel */
+.form-panel {
+  flex: 1 1 50%;
+  background: #f9f9f9;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-panel h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.form-panel p.intro {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+form {
+  max-width: 480px;
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1 1 200px;
+  margin-bottom: 1rem;
+}
+.field label {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+.field input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.field input:focus {
+  outline: none;
+  border-color: #346e35;
+  box-shadow: 0 0 0 2px rgba(52, 110, 53, 0.2);
+}
+.field input.error {
+  border-color: #c0392b;
+  background: #fee;
+}
+
+.submit-group {
+  margin-top: 1.5rem;
+}
+.submit-group button {
+  background: #346e35;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.submit-group button:hover {
+  background: #2c5c2d;
+}
+
+.login-link {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
