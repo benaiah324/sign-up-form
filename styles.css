@@ -21,6 +21,14 @@ a:hover {
   text-decoration: underline;
 }
 
+/* load Norse bold font */
+@font-face {
+  font-family: "Norse";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/norse.bold.otf") format("opentype");
+}
+
 /* container splits screen in two */
 .container {
   display: flex;
@@ -29,30 +37,34 @@ a:hover {
 
 /* left panel */
 .hero {
-  position: relative;
+  /* position: relative; not needed when centering via flex */
   flex: 1 1 50%;
   /* use local image from img folder */
   background: url("./img/halie.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .hero .logo {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+  /* center inside parent flex container and span full width */
+  width: 1000%;
   color: white;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 4rem;
+  font-weight: 700; /* use bold font weight */
+  font-family: "Norse", system-ui, sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0.75rem;
+  border-radius: 4px;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.hero .logo svg {
-  width: 40px;
-  height: 40px;
+.hero .logo img {
+  width: 60px;
+  height: 80px;
   margin-right: 0.5rem;
 }
 
@@ -112,6 +124,14 @@ form {
 .field input.error {
   border-color: #c0392b;
   background: #fee;
+}
+
+/* visual feedback using HTML validity states */
+.field input:invalid {
+  border-color: #c0392b;
+}
+.field input:valid {
+  border-color: #3498db;
 }
 
 .submit-group {
